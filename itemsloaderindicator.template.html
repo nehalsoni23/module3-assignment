@@ -1,0 +1,22 @@
+<div class="table-responsive container">
+    <table ng-if="foundItem.length > 0" class="table table-hover table-striped">
+      <thead>
+        <th>Sr. no</th>
+        <th>Short Name</th>
+        <th>Item Name</th>
+        <th>Item Description</th>
+        <th>Price_small</th>
+        <th>Price_large</th>
+        <th>Remove Item</th>
+      </thead>
+      <tbody ng-repeat="item in foundItem">
+        <td>{{$index + 1}}</td>
+        <td>{{ item.short_name}}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.price_small }}</td>
+        <td>{{ item.price_large }}</td>
+        <td><button class="btn btn-default" ng-click="onRemove({index: $index});">Don't want this one!</button><td>
+      </tbody>
+    </table>
+</div>
